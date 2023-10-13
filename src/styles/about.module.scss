@@ -1,0 +1,54 @@
+@use "mixin" as m;
+
+.card {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 2rem;
+  margin: 4rem auto;
+  position: relative;
+  z-index: 2;
+  @include m.mq("sp") {
+    margin: 2rem auto;
+  }
+
+  .content {
+    width: 45%;
+    font-size: 1.16rem;
+    font-weight: 700;
+    view-transition-name: about-bg;
+    line-height: 1.6;
+    height: 100%;
+    @include m.mq("tab") {
+      width: 60%;
+      font-size: 1rem;
+      padding-bottom: 2.5rem;
+    }
+    @include m.mq("sp") {
+      width: 25rem;
+      font-size: 0.8rem;
+    }
+    .author {
+      position: absolute;
+      bottom: 0px;
+      @include m.mq("tab") {
+        bottom: -2.5rem;
+      }
+      .redirect {
+        position: relative;
+        &::after {
+          position: absolute;
+          content: "";
+          display: block;
+          width: 1rem; /* 画像の幅 */
+          height: 1rem; /* 画像の高さ */
+          right: -1.1rem;
+          top: 0.35rem;
+          background-image: url("../../public/redirect.png");
+          background-size: contain;
+          background-repeat: no-repeat;
+        }
+      }
+    }
+  }
+}

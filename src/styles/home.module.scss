@@ -1,0 +1,11 @@
+.section {
+  text-align: center;
+  .image {
+    display: flex;
+    justify-content: center;
+  }
+  .copy {
+    font-size: 1.6rem;
+    font-style: italic;
+  }
+}

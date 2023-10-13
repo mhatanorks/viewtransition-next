@@ -1,0 +1,38 @@
+@use "mixin" as m;
+
+.header {
+  text-align: center;
+  .logo {
+    letter-spacing: -0.34rem;
+    font-style: italic;
+    font-size: 60px;
+    text-shadow: 7px 2px 0px rgba(8, 47, 73, 0.2);
+    margin-top: 1rem;
+    text-decoration: none;
+    @include m.mq("sp") {
+      font-size: 44px;
+    }
+  }
+}
+.footer {
+  display: flex;
+  justify-content: center;
+  position: fixed;
+  width: 100%;
+  font-size: 0.9rem;
+  bottom: 0;
+  padding: 0.1rem;
+  background: #fafafa;
+  opacity: 1;
+  z-index: 100;
+  @include m.mq("sp") {
+    display: block;
+    text-align: center;
+    font-size: 0.75rem;
+  }
+}
+
+.public {
+  width: min(calc(100% - 2rem), 1280px);
+  margin: 0 auto 10rem;
+}
