@@ -13,23 +13,17 @@
   }
 
   .content {
-    width: 45%;
-    font-size: 1.16rem;
+    width: 50%;
+    font-size: calc(1rem + (24 - 16)*((100vw - 320px) / (1920 - 320)));
     font-weight: 700;
     view-transition-name: about-bg;
     line-height: 1.6;
     height: 100%;
-    @include m.mq("tab") {
-      width: 60%;
-      font-size: 1rem;
-      padding-bottom: 2.5rem;
-    }
     @include m.mq("sp") {
-      width: 25rem;
-      font-size: 0.8rem;
+      width: 100%;
     }
     .author {
-      position: absolute;
+      // position: absolute;
       bottom: 0px;
       @include m.mq("tab") {
         bottom: -2.5rem;
