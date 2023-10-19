@@ -97,12 +97,6 @@ a {
   text-decoration: none;
 }
 
-::view-transition-old(root),
-::view-transition-new(root) {
-  /* animation-duration: 0.1s; */
-}
-
-
 @keyframes fadeInUp {
   from {
     opacity: 0; /* 開始時点では完全に透明に */
@@ -120,7 +114,7 @@ a {
   animation-name: fadeInUp; /* アニメーション名を指定 */
   animation-duration: 0.2s; /* アニメーションの持続時間を指定 */
   animation-timing-function: ease;
-  animation-fill-mode: forwards;  /* アニメーション終了後も最後のフレームを保持 */
+  animation-fill-mode: forwards; /* アニメーション終了後も最後のフレームを保持 */
   animation-delay: 0s; /* or 2000ms */
 }
 ::view-transition-new(fade-in-2) {
@@ -137,3 +131,33 @@ a {
   animation-fill-mode: forwards;
   animation-delay: 0.15s;
 }
+/* 
+@keyframes old-slide {
+  from {
+    left: 0%;
+  }
+  to {
+    left: 200%;
+  }
+}
+@keyframes new-slide {
+  from {
+    left: 200%;
+  }
+  to {
+    left: 0%;
+  }
+}
+
+::view-transition-old(root),
+::view-transition-new(root) {
+  animation-duration: 1s;
+}
+
+::view-transition-old(root) {
+  animation-name: old-slide;
+}
+
+::view-transition-new(root) {
+  animation-name: new-slide;
+} */

@@ -1,0 +1,50 @@
+@charset "UTF-8";
+.card {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 2rem;
+  margin: 4rem auto;
+  position: relative;
+  z-index: 2;
+}
+@media (max-width: 767px) {
+  .card {
+    margin: 2rem auto;
+  }
+}
+.card .content {
+  width: 50%;
+  font-size: calc(1rem + 8 * (100vw - 320px) / 1600);
+  font-weight: 700;
+  line-height: 1.6;
+  height: 100%;
+}
+@media (max-width: 767px) {
+  .card .content {
+    width: 100%;
+  }
+}
+.card .content .author {
+  bottom: 0px;
+}
+@media (max-width: 959px) {
+  .card .content .author {
+    bottom: -2.5rem;
+  }
+}
+.card .content .author .redirect {
+  position: relative;
+}
+.card .content .author .redirect::after {
+  position: absolute;
+  content: "";
+  display: block;
+  width: 1rem; /* 画像の幅 */
+  height: 1rem; /* 画像の高さ */
+  right: -1.1rem;
+  top: 0.35rem;
+  background-image: url("../../public/redirect.png");
+  background-size: contain;
+  background-repeat: no-repeat;
+}

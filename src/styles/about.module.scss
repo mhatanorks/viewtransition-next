@@ -16,7 +16,7 @@
     width: 50%;
     font-size: calc(1rem + (24 - 16)*((100vw - 320px) / (1920 - 320)));
     font-weight: 700;
-    view-transition-name: about-bg;
+    // view-transition-name: about-bg;
     line-height: 1.6;
     height: 100%;
     @include m.mq("sp") {

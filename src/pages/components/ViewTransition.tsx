@@ -5,9 +5,6 @@ import { FC, useCallback } from "react";
 const ViewTransition: FC<any> = ({ children, href }) => {
   const router = useRouter();
   const handleClick = useCallback(() => {
-    console.log(href)
-    console.log(location.href)
-    
     
     // navボタンから現在のリンクを押した際のアニメーションの再発動防止
     if (!href.endsWith("/")) {
